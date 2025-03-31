@@ -1,14 +1,14 @@
-import { auth } from "@clerk/nextjs";
+import { auth } from "@clerk/nextjs/server";
 
 const AdminIds = [
     "user_2uLKtPiV4483nVboiByh2mgv89H",
 ];
 
-export const isAdmin = () => {
-    const { userId } = auth(); // Use getAuth instead of auth
+export const isAdmin = async () => {
+    const { userId } = await auth();
 
     if (!userId) {
         return false;
     }
-    return AdminIds.includes(userId); // Use includes for better readability
+    return AdminIds.includes(userId);
 };

@@ -32,12 +32,12 @@ const Sidebar = ({ className, onClose }: Props) => {
       </Link>     
       <div className="flex flex-col gap-y-2 flex-1">
         <SidebarItem label="Learn" href="/learn" iconSrc="/reading-book.png" />
+        <SidebarItem label="Lesson" href="/lessonPage" iconSrc="/open-book (1).png" />
         <SidebarItem label="Ide" href="/ide" iconSrc="/ide.png" />
-        <SidebarItem label="Coding game" href="/coding-games" iconSrc="/coding.png" />
+        <SidebarItem label="Coding game" href="/coding-game" iconSrc="/coding.png" />
         <SidebarItem label="Leaderboard" href="/leaderboard" iconSrc="/podium.png" />
         <SidebarItem label="Quest" href="/quest" iconSrc="/paper.png" />
         <SidebarItem label="Shop" href="/shop" iconSrc="/shopping-bag.png" />
-        <SidebarItem label="Achievement" href="/achievement" iconSrc="/medal.png" />
         <SidebarItem label="Help & Support" href="/help" iconSrc="/faq.png" />
       </div>    
       <div className="p-4">
