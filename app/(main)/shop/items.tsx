@@ -28,7 +28,7 @@ export const Items = ({ hearts, points }: Props) => {
   };
 
   const onBuyOneHeart = () => {
-    if (pending || hearts >= 5 || points < 150) return;
+    if (pending || hearts >= 5 || points < 50) return;
 
     startTransition(async () => {
       try {
@@ -40,7 +40,7 @@ export const Items = ({ hearts, points }: Props) => {
   };
 
   const onBuyTwoHearts = () => {
-    if (pending || hearts > 3 || points < 225) return;
+    if (pending || hearts > 3 || points < 90) return;
 
     startTransition(async () => {
       try {
@@ -62,11 +62,11 @@ export const Items = ({ hearts, points }: Props) => {
           <p className="text-cyan-700 text-lg lg:text-xl font-bold">1 Heart</p>
           <p className="text-slate-400 text-sm">Purchase one additional heart</p>
         </div>
-        <Button onClick={onBuyOneHeart} disabled={pending || hearts >= 5 || points < 150} className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-xl shadow-md transition">
+        <Button onClick={onBuyOneHeart} disabled={pending || hearts >= 5 || points < 50} className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-xl shadow-md transition">
           {hearts >= 5 ? "Full" : (
             <div className="flex items-center gap-x-2">
               <Image src="/point.png" alt="Points" height={20} width={20} className="rounded-full" />
-              <p className="text-white font-medium">150</p>
+              <p className="text-white font-medium">50</p>
             </div>
           )}
         </Button>
@@ -82,11 +82,11 @@ export const Items = ({ hearts, points }: Props) => {
           <p className="text-cyan-700 text-lg lg:text-xl font-bold">2 Hearts</p>
           <p className="text-slate-400 text-sm">Purchase two additional hearts</p>
         </div>
-        <Button onClick={onBuyTwoHearts} disabled={pending || hearts > 3 || points < 225} className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-xl shadow-md transition">
+        <Button onClick={onBuyTwoHearts} disabled={pending || hearts > 3 || points < 90} className="bg-cyan-500 hover:bg-cyan-600 text-white px-4 py-2 rounded-xl shadow-md transition">
           {hearts > 3 ? "Not Enough Space" : (
             <div className="flex items-center gap-x-2">
               <Image src="/point.png" alt="Points" height={20} width={20} className="rounded-full" />
-              <p className="text-white font-medium">225</p>
+              <p className="text-white font-medium">90</p>
             </div>
           )}
         </Button>

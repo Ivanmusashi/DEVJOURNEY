@@ -6,7 +6,7 @@ import { FeedWrapper } from "@/components/feed-wrapper";
 import Image from "next/image";
 import { quests } from "@/constants";
 import { Leaderboard } from "@/components/leaderboard";
-
+import { DailyTip } from "@/components/daily-tip";
 const QuestPage = async () => {
   const userProgress = await getUserProgress();
 
@@ -23,6 +23,7 @@ const QuestPage = async () => {
           points={userProgress.points}
           hasActiveSubscription={false}
         />
+        <DailyTip />
         <Leaderboard />
       </StickyWrapper>
 

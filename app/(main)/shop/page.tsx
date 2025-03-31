@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Items } from "./items";
 import { Quest } from "@components/quest";
 import { Leaderboard } from "@/components/leaderboard";
+import { DailyTip } from "@/components/daily-tip";
 
 const ShopPage = async() => {
     const userProgress = await getUserProgress();
@@ -19,6 +20,8 @@ const ShopPage = async() => {
         <div className="flex flex-row-reverse gap-[48px] px-6">
             <StickyWrapper>
                 <UserProgress activeCourse={userProgress.activeCourse} hearts={userProgress.hearts} points={userProgress.points} hasActiveSubscription={false} />
+
+                <DailyTip />
                 <Leaderboard />
                 <Quest points={userProgress.points} />
             </StickyWrapper>

@@ -44,10 +44,10 @@ const onClick = () => {
         </DialogHeader>
         <DialogFooter className="mb-4">
           <div className="flex flex-col gap-y-4 w-full">
-            <Button variant="hologram" className="w-full" size="lg" 
+         {/* <Button variant="hologram" className="w-full" size="lg" 
             onClick={onClick}>
               get unlimited hearts
-            </Button>
+            </Button>*/}
             <Button
               variant="primaryOutline"
               className="w-full"

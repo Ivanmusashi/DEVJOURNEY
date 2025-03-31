@@ -43,8 +43,8 @@ export const upsertChallengeProgress = async (challengeId: number) => {
             eq(challengeProgress.id, existingChallengeProgress.id)
         );
         await db.update(userProgress).set({
-            hearts: currentUserProgress.hearts,
-            points: currentUserProgress.points + 10,
+          
+            points: currentUserProgress.points + 5,
         }).where(eq(userProgress.userId, userId));
 
         revalidatePath("/learn");
@@ -61,7 +61,7 @@ export const upsertChallengeProgress = async (challengeId: number) => {
     });
 
     await db.update(userProgress).set({
-        points: currentUserProgress.points + 10,
+        points: currentUserProgress.points + 5,
     }).where(eq(userProgress.userId, userId));
 
     revalidatePath("/learn");

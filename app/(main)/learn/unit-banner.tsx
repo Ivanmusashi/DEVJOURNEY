@@ -14,6 +14,7 @@ export const UnitBanner = ({ title, description }: Props) => {
         <h3 className="text-xl font-bold text-white">{title}</h3>
         <p className="text-lg text-gray-300">{description}</p>
       </div>
+      {/*
       <Link href="/lesson">
         <Button
           variant="hologram"
@@ -23,7 +24,7 @@ export const UnitBanner = ({ title, description }: Props) => {
           <NotebookText className="mr-2" />
           Continue
         </Button>
-      </Link>
+      </Link>*/}
     </div>
   );
 };
