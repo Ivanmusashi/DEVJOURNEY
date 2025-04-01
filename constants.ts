@@ -1,4 +1,7 @@
 export const POINTS_TO_REFILL= 10;
+export const POINTS_FOR_ONE_HEART = 50;
+export const POINTS_FOR_TWO_HEARTS = 90;
+
 export const quests = [
     {
         title:"Earn 20 XP",

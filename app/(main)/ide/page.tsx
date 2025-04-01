@@ -61,7 +61,7 @@ const IDE = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen bg-gray-900 text-white">
+    <div className="flex flex-col h-screen bg-gray-900 text-white my-20">
       {/* Toolbar */}
       <div className="flex p-4 bg-gray-800 gap-4 border-b border-gray-700">
         <select value={language} onChange={handleLanguageChange} className="bg-gray-700 p-2 rounded">

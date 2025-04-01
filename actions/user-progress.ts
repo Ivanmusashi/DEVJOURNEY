@@ -123,7 +123,7 @@ export const buyOneHeart = async () => {
     if (!currentUserProgress) {
         throw new Error("User not found");
     }
-    if (currentUserProgress.points < 150) {
+    if (currentUserProgress.points < 50) {
         throw new Error("Not enough points");
     }
     if (currentUserProgress.hearts >= 5) {
@@ -132,7 +132,7 @@ export const buyOneHeart = async () => {
 
     await db.update(userProgress).set({
         hearts: Math.min(currentUserProgress.hearts + 1, 5),
-        points: currentUserProgress.points - 150,
+        points: currentUserProgress.points - 50,
     }).where(eq(userProgress.userId, currentUserProgress.userId));
 
     revalidatePath("/shop");
@@ -148,7 +148,7 @@ export const buyTwoHearts = async () => {
     if (!currentUserProgress) {
         throw new Error("User not found");
     }
-    if (currentUserProgress.points < 225) {
+    if (currentUserProgress.points < 90) {
         throw new Error("Not enough points");
     }
     if (currentUserProgress.hearts >= 4) {
@@ -157,7 +157,7 @@ export const buyTwoHearts = async () => {
 
     await db.update(userProgress).set({
         hearts: Math.min(currentUserProgress.hearts + 2, 5),
-        points: currentUserProgress.points - 225,
+        points: currentUserProgress.points - 90,
     }).where(eq(userProgress.userId, currentUserProgress.userId));
 
     revalidatePath("/shop");

@@ -8,6 +8,7 @@ import Image from "next/image";
 import { Separator } from "@components/ui/separator";
 import {Avatar, AvatarImage} from "@components/ui/avatar";
 import {Quest} from "@/components/quest";
+import {DailyTip} from "@/components/daily-tip";
 
 
 
@@ -35,7 +36,7 @@ const LeaderboardPage = async()=>{
             points={userProgress.points}
             hasActiveSubscription={false}
             />
-
+<DailyTip />
              <Quest points={userProgress.points}/>
            </StickyWrapper>
 <FeedWrapper>
