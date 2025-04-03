@@ -45,8 +45,8 @@ const main = async () => {
       },
       {
         id: 5,
-        title: "Css",
-        imageSrc: "/css.png",
+        title: "MYSQL",
+        imageSrc: "/mysql.png",
       },
     ]);
 
@@ -383,7 +383,7 @@ await db.insert(schema.units).values([
       {
         id: 2,
         lessonId: 1,
-        type: "ASSIST",
+        type: "SELECT",
         order: 2,
         question: "Which keyword is recomended for declaring variablea that are reassigned frequently?",
       },
@@ -404,7 +404,7 @@ await db.insert(schema.units).values([
       {
         id: 5,
         lessonId: 1,
-        type: "ASSIST",
+        type: "SELECT",
         order: 5,
         question: "why is let prefered over var?",
       },
@@ -455,7 +455,7 @@ await db.insert(schema.units).values([
       {
         id: 12,
         lessonId: 2,
-        type: "ASSIST",
+        type: "SELECT",
         order: 3,
         question: "which statement best descrribe for global scope ",
       },
@@ -465,6 +465,7 @@ await db.insert(schema.units).values([
         type: "SELECT",
         order: 4,
         question: `Which variables declaration would be accessible outside of a function? 
+
 function example() {
   var a = 10;
   let b = 20;
@@ -480,7 +481,7 @@ function example() {
       {
         id: 15,
         lessonId: 2,
-        type: "ASSIST",
+        type: "SELECT",
         order: 6,
         question: "which scope is created when a function is declared?",
       },
@@ -521,6 +522,8 @@ function example() {
         order: 11,
        question: "can a variables declared inside a block using let be accessed outside of that block ",
       },
+
+
 
      
 

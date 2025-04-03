@@ -56,7 +56,7 @@ const QuestPage = async () => {
               return (
                 <div
                   key={quest.title}
-                  className="flex items-center w-full p-5 gap-x-5 border border-gray-100 rounded-xl shadow-sm hover:shadow transition-all"
+                  className="flex items-center w-full p-5 gap-x-5  rounded-xl shadow-sm hover:shadow transition-all"
                 >
                   {/* Quest Icon */}
                   <div className="flex-shrink-0 bg-cyan-50 p-3 rounded-full">

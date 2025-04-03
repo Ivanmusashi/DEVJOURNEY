@@ -1,4 +1,4 @@
-export const POINTS_TO_REFILL= 10;
+export const POINTS_TO_REFILL= 150;
 export const POINTS_FOR_ONE_HEART = 50;
 export const POINTS_FOR_TWO_HEARTS = 90;
 
@@ -20,7 +20,7 @@ export const quests = [
         value:500,
     },
     {
-        title:"Earn 100 XP",
+        title:"Earn 1000 XP",
         value:1000,
     },
 ]

@@ -52,9 +52,17 @@ lg:max-h-[150px] w-full">
 </div>
 )}
 
-<div className={cn("flex items-center justify-between",
-    type === "ASSIST" && "flex-row-reverse",
+<div className={cn("flex items-center justify-start gap-4",
+    type === "ASSIST" && "flex-row ",
 )}>
+    <div className={cn(
+        "lg:w-[30px] lg:h-[30px] w-[20px] h-[20px] border-2 flex items-center justify-center rounded-lg text-neutral-400 lg:text-[15px] text-xs font-semibold",
+        selected && "border-sky-300 text-sky-500",
+    selected && status === "correct" && "border-green-300 text-green-500",
+    selected && status === "wrong" && "border-rose-300 text-rose-500",
+    )}>
+        {shortcut}
+    </div>
 {type === "ASSIST" && <div />}
 <p className={cn(
     "text-neutral-600 text-sm lg:text-base",
@@ -64,14 +72,7 @@ lg:max-h-[150px] w-full">
 )}>
     {text}
     </p>
-    <div className={cn(
-        "lg:w-[30px] lg:h-[30px] w-[20px] h-[20px] border-2 flex items-center justify-center rounded-lg text-neutral-400 lg:text-[15px] text-xs font-semibold",
-        selected && "border-sky-300 text-sky-500",
-    selected && status === "correct" && "border-green-300 text-green-500",
-    selected && status === "wrong" && "border-rose-300 text-rose-500",
-    )}>
-        {shortcut}
-    </div>
+    
 </div>
     
     </div>

@@ -107,9 +107,9 @@ export const Quiz = ({
             setStatus("correct");
             setPercentage((prev) => prev + 100 / challenges.length);
             // this is practice
-            if (initialPercentage === 100) {
+        {/*   if (initialPercentage === 100) {
               setHearts((prev) => Math.min(prev + 1, 5));
-            }
+            } */}
           })
           .catch(() => {
             console.error("Something went wrong, please try again");
@@ -178,7 +178,7 @@ export const Quiz = ({
 
   const title =
     challenge.type === "ASSIST"
-      ? "Select the correct meaning"
+      ? "What is the output of this code"
       : challenge.question;
 
   return (
