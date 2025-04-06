@@ -464,12 +464,7 @@ await db.insert(schema.units).values([
         lessonId: 2,
         type: "SELECT",
         order: 4,
-        question: `Which variables declaration would be accessible outside of a function? 
-
-function example() {
-  var a = 10;
-  let b = 20;
-}`,
+        question: "Which variables declaration would be accessible outside of a block ",
       },
       {
         id: 14,
@@ -845,26 +840,26 @@ function example() {
       {
         id: 49,
         challengeId: 13,
-        correct: false,
-        text: "only a",
+        correct: true,
+        text: "only var",
       },
       {
         id: 50,
         challengeId: 13,
         correct: false,
-        text: "only b",
+        text: "only let",
       },
       {
         id: 51,
         challengeId: 13,
         correct: false,
-        text: "both a and b",
+        text: "both var and let",
       },
       {
         id: 52,
         challengeId: 13,
-        correct: true,
-        text: "neither a nor b",
+        correct: false,
+        text: "neither var nor let",
       },
 
       {
