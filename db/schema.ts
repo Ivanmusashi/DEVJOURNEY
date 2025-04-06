@@ -12,7 +12,7 @@ import { sql } from "drizzle-orm";
 export const courses = pgTable("courses", {
   id: serial("id").primaryKey(),
   title: text("title").notNull(),
-  imageSrc: text("image_src").notNull(), // Using image_src
+  imageSrc: text("image_src").notNull(),
 });
 
 export const coursesRelation = relations(courses, ({ many }) => ({

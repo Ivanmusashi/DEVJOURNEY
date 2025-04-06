@@ -29,7 +29,7 @@ const main = async () => {
   }
 };
 
-// Call the main function to execute the seeding
+
 main().catch((error) => {
   console.error(error);
   process.exit(1);

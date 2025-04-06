@@ -23,7 +23,7 @@ return (
    initialLessonChallenges={lesson.challenges}
    initialHearts={userProgress.hearts}
    initialPercentage={initialPercentage}
-   userSubscription={null}
+
    
    />
 );

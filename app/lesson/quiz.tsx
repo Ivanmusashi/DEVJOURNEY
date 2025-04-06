@@ -16,7 +16,6 @@ import { useWindowSize, useMount } from "react-use";
 import { useHeartsModal } from "@/store/use-hearts-modal";
 import { usePracticeModal } from "@/store/use-practice-modal";
 
-
 type Props = {
   initialPercentage: number;
   initialHearts: number;
@@ -25,7 +24,6 @@ type Props = {
     completed: boolean;
     challengeOptions: typeof challengeOptions.$inferSelect[];
   })[];
-  
 };
 
 export const Quiz = ({
@@ -33,16 +31,15 @@ export const Quiz = ({
   initialHearts,
   initialLessonId,
   initialLessonChallenges,
-  
 }: Props) => {
-  const {open:openHeartsModal} = useHeartsModal();
-  const {open:openPracticeModal} = usePracticeModal();
+  const { open: openHeartsModal } = useHeartsModal();
+  const { open: openPracticeModal } = usePracticeModal();
 
-  useMount(()=>{
-    if(initialPercentage === 100){
+  useMount(() => {
+    if (initialPercentage === 100) {
       openPracticeModal();
     }
-  })
+  });
 
   const { width, height } = useWindowSize();
   const router = useRouter();
@@ -50,7 +47,7 @@ export const Quiz = ({
 
   const [lessonId] = useState(initialLessonId);
   const [hearts, setHearts] = useState(initialHearts);
-  const [percentage, setPercentage] = useState(()=>{
+  const [percentage, setPercentage] = useState(() => {
     return initialPercentage === 100 ? 0 : initialPercentage;
   });
   const [challenges] = useState(initialLessonChallenges);
@@ -106,10 +103,6 @@ export const Quiz = ({
             }
             setStatus("correct");
             setPercentage((prev) => prev + 100 / challenges.length);
-            // this is practice
-        {/*   if (initialPercentage === 100) {
-              setHearts((prev) => Math.min(prev + 1, 5));
-            } */}
           })
           .catch(() => {
             console.error("Something went wrong, please try again");
@@ -120,7 +113,7 @@ export const Quiz = ({
         reduceHearts(challenge.id)
           .then((response) => {
             if (response?.error === "hearts") {
-             openHeartsModal();
+              openHeartsModal();
               return;
             }
             setStatus("wrong");
@@ -183,39 +176,35 @@ export const Quiz = ({
 
   return (
     <>
-    <div  className="flex flex-col items-center justify-around">
-      <Header
-        hearts={hearts}
-        percentage={percentage}
-       
-      />
-      <div className="flex-1 flex items-center justify-center mt-24">
-        <div className="h-full flex items-center justify-center">
-          <div className="lg:min-h-[350px] lg:w-[600px] w-full px-6 lg:px-0 flex flex-col gap-y-12">
-            <h1 className="text-lg lg:text-3xl text-center font-bold text-white">
-              {title}
-            </h1>
-            <div className="flex-1">
-              {challenge.type === "ASSIST" && (
-                <QuestionBubble question={challenge.question} />
-              )}
-              <Challenge
-                options={options}
-                onSelect={onSelect}
-                status={status}
-                selectedOption={selectedOption}
-                disabled={pending}
-                type={challenge.type}
-              />
+      <div className="flex flex-col items-center justify-around">
+        <Header hearts={hearts} percentage={percentage} />
+        <div className="flex-1 flex items-center justify-center mt-24">
+          <div className="h-full flex items-center justify-center">
+            <div className="lg:min-h-[350px] lg:w-[600px] w-full px-6 lg:px-0 flex flex-col gap-y-12">
+              <h1 className="text-lg lg:text-3xl text-center font-bold text-white">
+                {title}
+              </h1>
+              <div className="flex-1">
+                {challenge.type === "ASSIST" && (
+                  <QuestionBubble question={challenge.question} />
+                )}
+                <Challenge
+                  options={options}
+                  onSelect={onSelect}
+                  status={status}
+                  selectedOption={selectedOption}
+                  disabled={pending}
+                  type={challenge.type}
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
-      <Footer
-        disabled={pending || !selectedOption}
-        status={status}
-        onCheck={onContinue}
-      />
+        <Footer
+          disabled={pending || !selectedOption}
+          status={status}
+          onCheck={onContinue}
+        />
       </div>
     </>
   );
