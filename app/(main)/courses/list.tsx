@@ -32,7 +32,7 @@ export const List = ({ courses, activeCourseId }: Props) => {
           key={course.id}
           id={course.id}
           title={course.title}
-          imageSrc={course.imageSrc} // Updated to use image_src
+          imageSrc={course.imageSrc} 
           onClick={onClick}
           disabled={pending}
           active={course.id === activeCourseId}

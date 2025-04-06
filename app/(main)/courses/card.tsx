@@ -27,10 +27,10 @@ export const Card = ({
       disabled && "pointer-events-none opacity-50"
     )}
   >
-    {/* Glass overlay with subtle gradient */}
+    
     <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-xl z-0"></div>
     
-    {/* Glow effect in background */}
+    
     <div className="absolute -inset-1 bg-blue-500/20 blur-xl rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
     
     <div className="min-h-[24px] w-full flex items-center justify-end relative z-10">

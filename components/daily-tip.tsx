@@ -10,18 +10,15 @@ export const DailyTip = () => {
   const [currentTip, setCurrentTip] = useState({ id: 0, title: "", description: "" });
 
   useEffect(() => {
-    // Get a random tip each day
-    // Use the day of year as a seed for consistent random selection per day
-    const today = new Date();
+     const today = new Date();
     const dayOfYear = Math.floor((today.getTime() - new Date(today.getFullYear(), 0, 0).getTime()) / (1000 * 60 * 60 * 24));
     
-    // Generate a 0-1 random number using the day as seed
+   
     const seededRandom = (seed: number) => {
       const x = Math.sin(seed) * 10000;
       return x - Math.floor(x);
     };
     
-    // Get a random index between 0 and the length of the tips array
     const randomIndex = Math.floor(seededRandom(dayOfYear) * dailyTips.length);
     setCurrentTip(dailyTips[randomIndex]);
   }, []);

@@ -39,15 +39,23 @@ const onClick = () => {
             you ran out of hearts
           </DialogTitle>
           <DialogDescription className="text-center text-base">
-            purchase them in the store
-          </DialogDescription>
+  purchase them in the store
+</DialogDescription>
+<Button
+  variant="primary"
+  className="mt-4 w-full"
+  size="lg"
+  onClick={() => {
+    close(); 
+    router.push("/shop");
+  }}
+>
+  Go to Shop
+</Button>
         </DialogHeader>
         <DialogFooter className="mb-4">
           <div className="flex flex-col gap-y-4 w-full">
-         {/* <Button variant="hologram" className="w-full" size="lg" 
-            onClick={onClick}>
-              get unlimited hearts
-            </Button>*/}
+         
             <Button
               variant="primaryOutline"
               className="w-full"

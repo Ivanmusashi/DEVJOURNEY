@@ -183,14 +183,15 @@ export const Quiz = ({
 
   return (
     <>
+    <div  className="flex flex-col items-center justify-around">
       <Header
         hearts={hearts}
         percentage={percentage}
         hasActiveSubscription={!!userSubscription?.isActive}
       />
-      <div className="flex-1 flex items-center justify-center mt-20">
+      <div className="flex-1 flex items-center justify-center mt-36">
         <div className="h-full flex items-center justify-center">
-          <div className="lg:min-h-[350px] lg:w-[600px] w-full px-6 lg:px-0 flex flex-col gap-y-12">
+          <div className="lg:min-h-[350px] lg:w-[600px] w-full px-6 lg:px-0 flex flex-col gap-y-12 lg:mt-20">
             <h1 className="text-lg lg:text-3xl text-center font-bold text-white">
               {title}
             </h1>
@@ -215,6 +216,7 @@ export const Quiz = ({
         status={status}
         onCheck={onContinue}
       />
+      </div>
     </>
   );
 };

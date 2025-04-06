@@ -6,7 +6,7 @@ import Link from "next/link";
 
 type Props = {
   label: string;
-  iconSrc?: string; // Keep optional, but handle undefined case
+  iconSrc?: string;
   href: string;
 };
 

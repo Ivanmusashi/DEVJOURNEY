@@ -21,7 +21,7 @@ const QuestPage = async () => {
           activeCourse={userProgress.activeCourse}
           hearts={userProgress.hearts}
           points={userProgress.points}
-          hasActiveSubscription={false}
+       
         />
         <DailyTip />
         <Leaderboard />
@@ -29,7 +29,7 @@ const QuestPage = async () => {
 
       <FeedWrapper>
         <div className="w-full flex flex-col items-center max-w-3xl mx-auto">
-          {/* Icon */}
+         
           <div className="bg-cyan-50 p-4 rounded-full mb-2 shadow-sm">
             <Image
               src="/point.png"
@@ -40,7 +40,7 @@ const QuestPage = async () => {
             />
           </div>
 
-          {/* Title & Description */}
+         
           <h1 className="text-center font-bold text-cyan-400 text-3xl my-4 tracking-tight">
             Quests
           </h1>
@@ -48,7 +48,7 @@ const QuestPage = async () => {
             Complete quests by earning points
           </p>
 
-          {/* Quest List */}
+         
           <ul className="w-full space-y-3">
             {quests.map((quest) => {
               const progress = Math.min(100, (userProgress?.points / quest.value) * 100);
@@ -58,7 +58,7 @@ const QuestPage = async () => {
                   key={quest.title}
                   className="flex items-center w-full p-5 gap-x-5  rounded-xl shadow-sm hover:shadow transition-all"
                 >
-                  {/* Quest Icon */}
+                 
                   <div className="flex-shrink-0 bg-cyan-50 p-3 rounded-full">
                     <Image
                       src="/point.png"
@@ -69,7 +69,7 @@ const QuestPage = async () => {
                     />
                   </div>
 
-                  {/* Quest Content */}
+                
                   <div className="flex flex-col gap-y-3 w-full">
                     <div className="flex justify-between items-center">
                       <p className="text-neutral-700 text-lg font-bold">{quest.title}</p>

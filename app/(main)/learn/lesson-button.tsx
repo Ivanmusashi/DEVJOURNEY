@@ -23,7 +23,7 @@ export const LessonButton = ({
   totalCount,
   locked,
   current,
-  percentage = 0, // Default to 0 if undefined
+  percentage = 0, 
 }: Props) => {
   const cycleLength = 8;
   const cycleIndex = index % cycleLength;

@@ -33,7 +33,7 @@ const LeaderboardPage = async () => {
                     activeCourse={userProgress.activeCourse}
                     hearts={userProgress.hearts}
                     points={userProgress.points}
-                    hasActiveSubscription={false}
+                  
                 />
                 <DailyTip />
                 <Leaderboard />
@@ -43,14 +43,14 @@ const LeaderboardPage = async () => {
             </StickyWrapper>
 
             <FeedWrapper>
-                {/* Help Page Section */}
+                
                 <div className="py-6 text-center">
-                    {/* Logo */}
+                    
                     <div className="flex justify-center py-4 m-4">
                         <Image src="/logo1.jpg" alt="DevJourney Logo" width={300} height={300} />
                     </div>
 
-                    {/* Social Media Links */}
+            
                     <div className="flex justify-center gap-8 py-4 m-4">
                         <Link href="https://facebook.com" target="_blank">
                             <Image src="/facebook (1).png" alt="Facebook" width={60} height={60} />
@@ -65,7 +65,7 @@ const LeaderboardPage = async () => {
 
                     <Separator />
 
-                    {/* Donation Section */}
+                
                     <h1 className="text-xl font-semibold m-4">Support Us</h1>
                     <p className="text-gray-600 text-xl">Your donations help us improve the platform!</p>
                     <div className="flex justify-center gap-8 py-4">
@@ -82,7 +82,7 @@ const LeaderboardPage = async () => {
 
                     <Separator />
 
-                    {/* About Us */}
+            
                     <h1 className="text-xl font-semibold m-4">About Us</h1>
                     <p className="text-gray-600 px-4 py-2 text-xl">
                         DevJourney Chat is an interactive learning platform that helps students master programming languages through real-time collaboration, an integrated coding environment, and engaging challenges. Join us and level up your coding skills!

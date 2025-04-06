@@ -13,14 +13,14 @@ export const Leaderboard = async()=>{
         leaderboardData,
     ])  
     
-    // Top 3 users
+    
     const topThree = leaderboard.slice(0, 3);
-    // Remaining users
+   
     const remainingUsers = leaderboard.slice(3);
     
     return (
         <div className="w-full flex flex-col items-center max-w-3xl mx-auto p-3 rounded-xl">
-            {/* Header with image and title side by side */}
+            
             <div className="flex items-center justify-center gap-2 mb-1.5">
                 <Image 
                     src="/podium.png"
@@ -43,7 +43,7 @@ export const Leaderboard = async()=>{
             <Separator className="mb-1 h-0.5 rounded-full w-full bg-gradient-to-r from-transparent via-cyan-200 to-transparent"/>
             
             <div className="w-full space-y-1">
-                {/* Top 3 users */}
+              
                 {topThree.map((userProgress, index) => (
                     <div
                         key={userProgress.userId}
@@ -73,9 +73,7 @@ export const Leaderboard = async()=>{
                     </div>
                 ))}
                 
-                {/* Separator between top 3 and the rest */}
-               
-                {/* Remaining users */}
+              
                 {remainingUsers.map((userProgress, index) => (
                     <div
                         key={userProgress.userId}

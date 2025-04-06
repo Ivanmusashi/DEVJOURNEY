@@ -10,7 +10,7 @@ import { POINTS_TO_REFILL,POINTS_FOR_ONE_HEART, POINTS_FOR_TWO_HEARTS } from "@/
 type Props = {
   hearts: number;
   points: number;
-  hasActiveSubscription: boolean;
+  
 };
 
 export const Items = ({ hearts, points }: Props) => {
@@ -58,7 +58,7 @@ export const Items = ({ hearts, points }: Props) => {
 
   return (
     <ul className="w-full shadow-md flex flex-col gap-4">
-      {/* Buy 1 Heart */}
+     
       <div className="flex items-center w-full p-4 gap-x-4 border-t-2 border-cyan-200 rounded-2xl bg-slate-800">
         <Image src="/heart.png" alt="One Heart" width={60} height={60} />
         <div className="flex-1">
@@ -79,7 +79,7 @@ export const Items = ({ hearts, points }: Props) => {
         </Button>
       </div>
 
-      {/* Buy 2 Hearts */}
+      
       <div className="flex items-center w-full p-4 gap-x-4 border-t-2 border-cyan-200 rounded-2xl bg-slate-800">
         <div className="relative w-16 h-16">
           <Image src="/two.png" alt="Two Hearts" width={60} height={60} />
@@ -102,7 +102,7 @@ export const Items = ({ hearts, points }: Props) => {
         </Button>
       </div>
 
-      {/* Refill Hearts */}
+     
       <div className="flex items-center w-full px-2 py-1 gap-x-2 border-t-2 border-cyan-200 rounded-2xl bg-slate-800">
         <Image src="/5hearts.png" alt="Hearts" width={80} height={80} />
         <div className="flex-1">

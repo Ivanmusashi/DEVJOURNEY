@@ -5,7 +5,7 @@ import Link from "next/link";
 import React from "react";
 import { SidebarItem } from "./sidebar-item";
 import { ClerkLoading, ClerkLoaded, UserButton } from "@clerk/nextjs";
-import Image from "next/image"; // ✅ Import Next.js Image
+import Image from "next/image"; 
 
 type Props = {
   className?: string;
@@ -17,13 +17,13 @@ const Sidebar = ({ className, onClose }: Props) => {
     <aside
       className={cn(
         "bg-[#0A0F1D] h-screen w-[256px] text-white p-4 fixed top-0 left-0 z-50 flex flex-col",
-        "max-[256px]:hidden", // Hide below 475px
+        "max-[256px]:hidden", 
         className
       )}
     >
       <Link href="/learn">
         <div className="pt-8 pl-4 pb-7 flex items-center gap-x-3">
-          {/* ✅ Use next/image with absolute path */}
+         
           <Image src="/logo1.jpg" height={40} width={40} alt="Logo" />
           <h1 className="text-2xl font-extrabold text-white tracking-wide">
             devJourney

@@ -3,10 +3,6 @@ import { UserProgress } from "@/components/user-progress";
 import { getUserProgress, getTopTenUsers } from "@/db/queries";
 import { redirect } from "next/navigation";
 import { FeedWrapper } from "@/components/feed-wrapper";
-import Image from "next/image";
-
-import { Separator } from "@components/ui/separator";
-import {Avatar, AvatarImage} from "@components/ui/avatar";
 import {Quest} from "@/components/quest";
 import {Leaderboard} from "@/components/leaderboard";
 import { DailyTip } from "@/components/daily-tip";
@@ -34,7 +30,7 @@ const LeaderboardPage = async()=>{
             activeCourse={userProgress.activeCourse}
             hearts={userProgress.hearts}
             points={userProgress.points}
-            hasActiveSubscription={false}
+          
             />
         <DailyTip />
         <Leaderboard />

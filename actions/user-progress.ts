@@ -116,7 +116,7 @@ export const refillHearts = async () => {
     revalidatePath("/lesson");
 };
 
-// Buy 1 Heart for 150 Points
+
 export const buyOneHeart = async () => {
     const currentUserProgress = await getUserProgress();
 
@@ -141,7 +141,7 @@ export const buyOneHeart = async () => {
     revalidatePath("/leaderboard");
 };
 
-// Buy 2 Hearts for 225 Points
+
 export const buyTwoHearts = async () => {
     const currentUserProgress = await getUserProgress();
 

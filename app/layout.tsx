@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 import {Nunito} from "next/font/google";
-//import{Toaster} from "@components/ui/sonner";
 import { ExitModal } from "@/components/modals/exit-modal";
 import "./globals.css";
 import { HeartsModal } from "@/components/modals/hearts-modal";
@@ -23,7 +22,7 @@ export default function RootLayout({
     <ClerkProvider>
     <html lang="en">
       <body className="font-sans antialiased">
-       {/* <Toaster />*/}
+       
 
        <ExitModal/>
        <HeartsModal/>

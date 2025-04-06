@@ -19,7 +19,7 @@ const ShopPage = async() => {
     return (
         <div className="flex flex-row-reverse gap-[48px] px-6">
             <StickyWrapper>
-                <UserProgress activeCourse={userProgress.activeCourse} hearts={userProgress.hearts} points={userProgress.points} hasActiveSubscription={false} />
+                <UserProgress activeCourse={userProgress.activeCourse} hearts={userProgress.hearts} points={userProgress.points} />
 
                 <DailyTip />
                 <Leaderboard />
@@ -32,7 +32,7 @@ const ShopPage = async() => {
                     <h1 className="text-center font-bold text-cyan-300 text-3xl my-4 tracking-tight">Shop</h1>
                     <p className="text-white text-center text-lg mb-8">Spend your points on amazing items</p>
                     <div className="w-full p-2 rounded-xl">
-                        <Items hearts={userProgress.hearts} points={userProgress.points} hasActiveSubscription={false} />
+                        <Items hearts={userProgress.hearts} points={userProgress.points} />
                     </div>
                 </div>
             </FeedWrapper>

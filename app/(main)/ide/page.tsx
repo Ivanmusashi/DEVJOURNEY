@@ -5,7 +5,6 @@ import dynamic from "next/dynamic";
 import axios from "axios";
 import { Loader2 } from "lucide-react";
 
-// Dynamically import Monaco Editor to prevent SSR issues
 const MonacoEditor = dynamic(() => import("@monaco-editor/react"), { ssr: false });
 
 const IDE = () => {
@@ -62,7 +61,7 @@ const IDE = () => {
 
   return (
     <div className="flex flex-col h-screen bg-gray-900 text-white my-20">
-      {/* Toolbar */}
+      
       <div className="flex p-4 bg-gray-800 gap-4 border-b border-gray-700">
         <select value={language} onChange={handleLanguageChange} className="bg-gray-700 p-2 rounded">
           <option value="javascript">JavaScript</option>
@@ -86,9 +85,9 @@ const IDE = () => {
         </button>
       </div>
 
-      {/* Main Content */}
+      
       <div className="flex flex-grow flex-col md:flex-row">
-        {/* Code Editor */}
+    
         <div className="w-full md:w-1/2 h-1/2 md:h-full border-b md:border-b-0 md:border-r border-gray-700">
           <MonacoEditor
             height="100%"
@@ -105,7 +104,7 @@ const IDE = () => {
           />
         </div>
 
-        {/* Console Output */}
+        
         <div className="w-full md:w-1/2 h-1/2 md:h-full bg-black p-4 overflow-y-auto">
           <div className="font-bold text-gray-300">Console Output:</div>
           {consoleOutput.length > 0 ? (
