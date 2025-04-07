@@ -11,7 +11,7 @@ import { Leaderboard } from "@/components/leaderboard";
 import { DailyTip } from "@/components/daily-tip";
 import Link from "next/link";
 
-const LeaderboardPage = async () => {
+const HelpPage = async () => {
     const userProgressData = getUserProgress();
     const leaderboardData = getTopTenUsers();
 
@@ -93,4 +93,4 @@ const LeaderboardPage = async () => {
     );
 };
 
-export default LeaderboardPage;
+export default HelpPage;

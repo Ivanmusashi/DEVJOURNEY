@@ -8,7 +8,7 @@ import {Leaderboard} from "@/components/leaderboard";
 import { DailyTip } from "@/components/daily-tip";
 
 
-const LeaderboardPage = async()=>{
+const CodingGamePage = async()=>{
     const userProgressData = getUserProgress();
     const  leaderboardData = getTopTenUsers();
 
@@ -44,4 +44,4 @@ const LeaderboardPage = async()=>{
         </div>
     )
 }
-export default LeaderboardPage;
+export default CodingGamePage;
